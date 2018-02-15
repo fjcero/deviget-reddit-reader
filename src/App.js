@@ -23,8 +23,8 @@ class App extends Component {
             {item.data.author}
             {item.data.created}
             {item.data.created_utc}
-            {item.data.preview}
             {item.data.thumbnail}
+            {item.data.thumbnail != '' && item.data.preview && item.data.preview[0]}
             {item.data.visited}
             {item.data.permalink}
             {item.data.url}
