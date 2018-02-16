@@ -1,0 +1,4 @@
+.posts__list__item {
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+  padding: 20px 10px;
+}

@@ -46,9 +46,10 @@ The components that we will create are:
 1. `App`: container, have the logic and main state of the application. for now we avoid using libs like Redux.
 2. `Sidebar`: Will be the presentational component to wrapp sidebar components and how app handles responsiveness.
 3. `Content`: Same as Sidebar, but for main content, when a user clicks over a post, content components will render here.
-4. `ListSidebar`: This container will handle state and wrap stateless components. Should manage pagination and dismiss actions. Here is were the state of posts is updated.
-5. `PostItemList`: This component will handle the view of how a post is rendered in the sidebar list 
-6. `PostPreview`: This component will handle the view of a Post Detail
+4. `ListSidebar`: This component will handle the display of lists shown in the sidebar only
+5. `PostListSidebar`: This container will handle state and wrap stateless components. Should manage pagination and dismiss actions. Here is were the state of posts is updated.
+6. `PostItemList`: This component will handle the view of how a post is rendered in the sidebar list 
+7. `PostPreview`: This component will handle the view of a Post Detail
 
 ## Tool reference for this project
 
