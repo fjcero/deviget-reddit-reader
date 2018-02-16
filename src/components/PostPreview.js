@@ -15,24 +15,35 @@ import './PostPreview.css';
 // {post.num_comments}
 const PostPreview = ({post}) => {
 
-  console.log(post);
-
-  const blankSlate = <div> Select one post in the sidebar</div>;
-
-  return (
-    <div className="post--preview">
-      {post === null
-        ? blankSlate
-        : (
-          <div>
-            <h2 className="post--title">{post.title}</h2>
-            <span className="post--image">{post.thumbnail}</span>
-            <div className="post--description">{post.description}</div>
-          </div>
-        )
-      }
+  const blankSlate = (
+    <div className="post--preview--empty">
+      <div>← Select one post in the sidebar</div>
     </div>
-  )
+  );
+
+  const renderImage = (post) => {
+    if (!post) return null;
+
+    let url = post.url || null
+
+    const isGifv = /gifv$/gi
+    if (isGifv.exec(url)) {
+      url = post.url.replace(isGifv, 'gif')
+    }
+
+    return <img src={url} alt={post.title} />
+  }
+
+
+  return post === null
+    ? blankSlate
+    : (
+      <div className="post--preview">
+        <h2 className="post--title">{post.title}</h2>
+        <div className="post--image">{renderImage(post)}</div>
+        <div className="post--description">{post.description}</div>
+      </div>
+    )
 }
 
 export default PostPreview;

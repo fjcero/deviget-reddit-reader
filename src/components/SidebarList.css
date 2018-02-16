@@ -13,6 +13,7 @@ ul.sidebar__list li button {
   border: none;
   font-size: 1.3rem;
   outline: none;
+  cursor: pointer;
 }
 ul.sidebar__list li button:active,
 ul.sidebar__list li button:focus,
