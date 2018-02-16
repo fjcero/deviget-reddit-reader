@@ -1,10 +1,14 @@
 import React from 'react';
 import './SidebarList.css';
 
-const SidebarList = (props) => {
-  const items = props.items;
+const SidebarList = ({items, openItem}) => {
   const listItems = items.map((item) =>
-    <li key={item.key}>{item}</li>
+    <li key={item.key}>
+      {openItem !== null
+        ? <button onClick={(e) => openItem(item, e)}>{item}</button>
+        : item
+      }
+    </li>
   );
 
   return (

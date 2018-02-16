@@ -5,3 +5,17 @@ ul.sidebar__list {
   overflow-y: scroll;
   height: 100%;
 }
+ul.sidebar__list li button {
+  padding: 0;
+  width: 100%;
+  transition: 200ms ease-in-out all 0s;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  outline: none;
+}
+ul.sidebar__list li button:active,
+ul.sidebar__list li button:focus,
+ul.sidebar__list li button:hover {
+  background: #222;
+}

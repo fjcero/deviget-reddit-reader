@@ -69,7 +69,14 @@ Will put all the elements/components and display as defined in the requirements.
 
 ### 5) Building post preview
 
+Build basic component. Now lets handle events to start showing some interaction in the app.
+
 ### 6) Handling events
+
+1. Click on list item and show in preview
+2. Dismiss single post
+3. Dismiss all the posts
+4. Paginate when scrolling down (get more posts)
 
 ### 7) Effects and Responsiveness
 

@@ -2,26 +2,12 @@ import React from 'react';
 import './PostsListItem.css';
 import moment from 'moment';
 
-// {data.id}
-// {data.title}
-// {data.author}
-// {data.created}
-// {data.created_utc}
-// {data.thumbnail}
-// {data.thumbnail !== '' && data.preview && data.preview[0]}
-// {data.visited}
-// {data.permalink}
-// {data.url}
-// {data.subreddit_name_prefixed}
-// {data.num_comments}
 const PostsListItem = ({data}) => {
   const haveValidThumbnail = /^http/gi.exec(data.thumbnail)
   const Thumbnail = haveValidThumbnail && haveValidThumbnail.length > 0
     ? <img className="post__thumbnail" src={data.thumbnail} alt={data.title} />
     : <span className="post__thumbnail post__thumbnail--empty">No Picture</span>;
-
   const title = data.title.substring(0, 120);
-
   const created = moment.unix(data.created).fromNow();
 
   return (

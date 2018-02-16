@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import Content from '../components/Content';
+import PostPreview from '../components/PostPreview';
 import PostsListItem from '../components/PostsListItem';
 import PostsListSidebar from './PostsListSidebar';
+import Sidebar from '../components/Sidebar';
 
 class App extends Component {
   constructor () {
     super();
     this.state = {
+      currentPost: null,
       posts: [],
     }
+    this.setCurrentPost = this.setCurrentPost.bind(this);
   }
 
   componentDidMount () {
@@ -25,12 +29,23 @@ class App extends Component {
     })
   }
 
+  setCurrentPost (post, e) {
+    this.setState({
+      currentPost: post.props.data
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <PostsListSidebar posts={this.state.posts} />
+        <Sidebar>
+          <PostsListSidebar
+            posts={this.state.posts}
+            onPreview={this.setCurrentPost}
+          />
+        </Sidebar>
         <Content>
-          Here is were the Post Preview will be shown.
+          <PostPreview post={this.state.currentPost} />
         </Content>
       </div>
     );
