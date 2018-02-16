@@ -14,9 +14,13 @@ $ yarn start
 
 ## Strategy
 
-1) Will use `top-down` strategy to start creating components and logic. This will reduce the amount of opinionated code and will allow to extend the application in the next steps.
+### 1) General Strategy
 
-2) First step is to connect to Reddit and get some information from the list of posts. To accomplish that will fetch data from Root component, `App` in this case.
+Will use `top-down` strategy to start creating components and logic. This will reduce the amount of opinionated code and will allow to extend the application in the next steps.
+
+### 2) API Connection
+
+First step is to connect to Reddit and get some information from the list of posts. To accomplish that will fetch data from Root component, `App` in this case.
 
 The URL to get this posts is `https://www.reddit.com/top.json`. I use Postman [2] to navigate requests and document APIs endpoints. 
 
@@ -35,9 +39,11 @@ Now will get the specific fields to show in the list and the post detail. The re
 
 Since Reddit API **IS NOT** well documented will use fields as described here.
 
-3) We have the connection and fields specified. Next will split the application into presentational (dumb, stateless) and containers (smart, stateful) components. The difference between this two is that one is onle responsible on how UI is shown, can have state but only for presentational purposes; and the other is responsible on how Logic and State between components is transferred.
+### 3) React Strategy: analize and define component types
 
-4) To start building components first will analize the application understand how many components we will have:
+We have the connection and fields specified. Next will split the application into presentational (dumb, stateless) and containers (smart, stateful) components. The difference between this two is that one is onle responsible on how UI is shown, can have state but only for presentational purposes; and the other is responsible on how Logic and State between components is transferred.
+
+To start building components first will analize the application understand how many components we will have:
 
 ![App Components](./docs/app_components.png?raw=true)
 
@@ -51,16 +57,21 @@ The components that we will create are:
 6. `PostItemList`: This component will handle the view of how a post is rendered in the sidebar list 
 7. `PostPreview`: This component will handle the view of a Post Detail
 
-5) Since we are using a `top-down` strategy to build the application, I should clarify also that the main objective of this approach is to build a static application, having all the elements in its places, to then add `state` updates. This is the less code consuming task since it implies to link different components, but building them is much more time consuming since more code is necessary.
+### 4) Building the sidebar
+
+Since we are using a `top-down` strategy to build the application, I should clarify also that the main objective of this approach is to build a static application, having all the elements in its places, to then add `state` updates. This is the less code consuming task since it implies to link different components, but building them is much more time consuming since more code is necessary.
 
 The objective is to have a design similar to the demo provided without yet responsiveness, but prepared for it.
 
 Will put all the elements/components and display as defined in the requirements. For dates I will use `moment.js` [4] since is the most easy way to solve this problem without extra effort.
 
-6) 
+### 5) Building post preview
 
+### 6) Handling events
 
-## Tool reference for this project
+### 7) Effects and Responsiveness
+
+## Tools reference for this project
 
 1. [Create React App](https://github.com/facebookincubator/create-react-app): for Boilerplate
 1. [Postman](https://www.getpostman.com/): for API calls
