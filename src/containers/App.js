@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Content from '../components/Content';
-import Sidebar from '../components/Sidebar';
-import SidebarList from '../components/SidebarList';
 import PostsListItem from '../components/PostsListItem';
+import PostsListSidebar from './PostsListSidebar';
 
 class App extends Component {
   constructor () {
@@ -29,11 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Sidebar>
-          <h2>Reddit Posts</h2>
-          <SidebarList items={this.state.posts} />
-          <div>dismiss all</div>
-        </Sidebar>
+        <PostsListSidebar posts={this.state.posts} />
         <Content>
           Here is were the Post Preview will be shown.
         </Content>

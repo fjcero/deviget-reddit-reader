@@ -1,7 +1,6 @@
 aside.sidebar {
   position: fixed;
   overflow: hidden;
-  overflow-y: scroll;
   width: 400px;
   height: 100vh;
   background: black;
