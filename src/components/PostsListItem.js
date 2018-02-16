@@ -1,5 +1,6 @@
 import React from 'react';
 import './PostsListItem.css';
+import moment from 'moment';
 
 // {data.id}
 // {data.title}
@@ -21,6 +22,8 @@ const PostsListItem = ({data}) => {
 
   const title = data.title.substring(0, 120);
 
+  const created = moment.unix(data.created).fromNow();
+
   return (
     <div className="posts__list__item">
       <div className="item__header">
@@ -30,7 +33,7 @@ const PostsListItem = ({data}) => {
           </span>
           <span className="post__author">{data.author}</span>
         </div>
-        <span className="post__created">{data.created_utc}</span>
+        <span className="post__created">{created}</span>
       </div>
       <div className="item__content">
         {Thumbnail}

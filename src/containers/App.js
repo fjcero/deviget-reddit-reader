@@ -5,10 +5,8 @@ import SidebarList from '../components/SidebarList';
 import PostsListItem from '../components/PostsListItem';
 
 class App extends Component {
-
   constructor () {
     super();
-
     this.state = {
       posts: [],
     }
@@ -34,6 +32,7 @@ class App extends Component {
         <Sidebar>
           <h2>Reddit Posts</h2>
           <SidebarList items={this.state.posts} />
+          <div>dismiss all</div>
         </Sidebar>
         <Content>
           Here is were the Post Preview will be shown.

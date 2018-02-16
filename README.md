@@ -51,10 +51,20 @@ The components that we will create are:
 6. `PostItemList`: This component will handle the view of how a post is rendered in the sidebar list 
 7. `PostPreview`: This component will handle the view of a Post Detail
 
+5) Since we are using a `top-down` strategy to build the application, I should clarify also that the main objective of this approach is to build a static application, having all the elements in its places, to then add `state` updates. This is the less code consuming task since it implies to link different components, but building them is much more time consuming since more code is necessary.
+
+The objective is to have a design similar to the demo provided without yet responsiveness, but prepared for it.
+
+Will put all the elements/components and display as defined in the requirements. For dates I will use `moment.js` [4] since is the most easy way to solve this problem without extra effort.
+
+6) 
+
+
 ## Tool reference for this project
 
 1. [Create React App](https://github.com/facebookincubator/create-react-app): for Boilerplate
 1. [Postman](https://www.getpostman.com/): for API calls
 1. [Skitch](https://evernote.com/intl/es/products/skitch): for fast sketching images
+1. [Moment](): library used for time formats
 
 

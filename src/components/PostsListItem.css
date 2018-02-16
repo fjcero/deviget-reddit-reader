@@ -14,8 +14,6 @@
   align-items: baseline;
 }
 .posts__list__item .post__status {}
-.posts__list__item .post__status--unread {}
-.posts__list__item .post__status--read {}
 .post__status .status__icon::before {
   position: relative;
   color: #2B7FFF;
