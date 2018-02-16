@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Sidebar from '../components/Sidebar';
+import Content from '../components/Content';
 
 class App extends Component {
 
@@ -46,6 +47,9 @@ class App extends Component {
             {this.state.posts}
           </div>
         </Sidebar>
+        <Content>
+          Here is were the Post Preview will be shown.
+        </Content>
       </div>
     );
   }

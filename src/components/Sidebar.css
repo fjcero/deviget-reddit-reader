@@ -1,0 +1,9 @@
+aside.sidebar {
+  position: fixed;
+  overflow: hidden;
+  width: 25%;
+  height: 100vh;
+  background: black;
+}
+
+

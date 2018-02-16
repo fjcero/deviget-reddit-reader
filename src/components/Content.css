@@ -1,0 +1,9 @@
+.content {
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+  background: white;
+  margin-left: 25%;
+  width: auto;
+  height: 100vh;
+}

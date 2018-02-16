@@ -1,7 +1,8 @@
 import React from 'react';
+import './Sidebar.css';
 
 const Sidebar = (props) => (
- <div className="sidebar">{props.children}</div>
+ <aside className="sidebar">{props.children}</aside>
 );
 
 export default Sidebar;
