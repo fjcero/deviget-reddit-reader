@@ -26,16 +26,18 @@ The URL to get this posts is `https://www.reddit.com/top.json`. I use Postman [2
 
 Now will get the specific fields to show in the list and the post detail. The required fields to show will be:
 
-> Id: `data.id` (will use for keys to improve performance on lists)
-> Title: `data.title`
-> Author: `data.author`
-> entry date: `data.created` or `data.created_utc`, (should format like “x hours ago”)
-> thumbnail: `data.thumbnail` (for those who have a picture)
-> if have thumbnail show previews: `data.preview`
-> Number of comments `data.num_comments`
-> Unread status: `data.visited` (probably will be a status in the state)
-> Subreddit: `data.subreddit_name_prefixed`
-> Permalink: `data.permalink`
+| Field | Access | Description |
+|---|---|---|
+|Id|`data.id`|will use for keys to improve performance on lists
+|Title|`data.title`|
+|Author|`data.author`|
+|entry date|`data.created` or `data.created_utc`| should format like “x hours ago”
+|thumbnail|`data.thumbnail`|for those who have a picture
+|images|`data.preview`|if post have thumbnail show previews
+|Number of comments|`data.num_comments`|
+|Unread status|`data.visited`|probably will be a status in the state
+|Subreddit|`data.subreddit_name_prefixed`|
+|Permalink|`data.permalink`|
 
 Since Reddit API **IS NOT** well documented will use fields as described here.
 
