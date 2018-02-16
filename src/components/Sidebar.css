@@ -1,9 +1,13 @@
 aside.sidebar {
   position: fixed;
   overflow: hidden;
+  overflow-y: scroll;
   width: 25%;
   height: 100vh;
   background: black;
 }
 
-
+aside.sidebar h2 {
+  color: white;
+  font-size: 18px;
+}

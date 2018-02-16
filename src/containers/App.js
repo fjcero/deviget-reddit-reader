@@ -33,6 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <Sidebar>
+          <h2>Reddit Posts</h2>
           <SidebarList items={this.state.posts} />
         </Sidebar>
         <Content>
