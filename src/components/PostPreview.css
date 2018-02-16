@@ -1,0 +1,14 @@
+.post--preview {
+  display: flex;
+  flex-direction: column;
+}
+.post--title {
+  text-align: left;
+}
+.post--image {
+  justify-content: center;
+}
+.post--description {
+  text-align: left;
+  font-size: 1.4rem;
+}
