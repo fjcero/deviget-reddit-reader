@@ -5,6 +5,20 @@ import PostsListItem from '../components/PostsListItem';
 import PostsListSidebar from './PostsListSidebar';
 import Sidebar from '../components/Sidebar';
 
+function removeObjectsFromCollection (collection, collectionToRemove) {
+  const keysToRemove = collectionToRemove.reduce((keys, obj) => {
+    return keys.concat(obj.props.data.id)
+  }, []);
+
+  const result = collection.reduce((col, obj) => {
+    return keysToRemove.indexOf(obj.props.data.id) < 0
+      ? col.concat(obj)
+      : col;
+  }, []);
+
+  return result.filter(r => r);
+}
+
 class App extends Component {
   constructor () {
     super();
@@ -12,7 +26,8 @@ class App extends Component {
       currentPost: null,
       posts: [],
     }
-    this.setCurrentPost = this.setCurrentPost.bind(this);
+    this.openPostPreview = this.openPostPreview.bind(this);
+    this.markAsRead = this.markAsRead.bind(this);
   }
 
   componentDidMount () {
@@ -29,9 +44,17 @@ class App extends Component {
     })
   }
 
-  setCurrentPost (post, e) {
+  openPostPreview (post, e) {
+    this.markAsRead([post]);
     this.setState({
       currentPost: post.props.data
+    });
+  }
+
+  markAsRead (posts, e) {
+    const unreadPosts = removeObjectsFromCollection(this.state.posts, posts)
+    this.setState({
+      posts: unreadPosts
     });
   }
 
@@ -41,7 +64,8 @@ class App extends Component {
         <Sidebar>
           <PostsListSidebar
             posts={this.state.posts}
-            onPreview={this.setCurrentPost}
+            onPreview={this.openPostPreview}
+            markAsRead={this.markAsRead}
           />
         </Sidebar>
         <Content>

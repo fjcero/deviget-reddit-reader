@@ -73,12 +73,16 @@ Build basic component. Now lets handle events to start showing some interaction 
 
 ### 6) Handling events
 
-1. Click on list item and show in preview
-2. Dismiss single post
-3. Dismiss all the posts
-4. Paginate when scrolling down (get more posts)
+1. [x] Click on list item and show in preview
+2. [x] Dismiss single post: 
+3. [ ] Dismiss all the posts
+4. [ ] Paginate when scrolling down (get more posts)
 
 ### 7) Effects and Responsiveness
+
+1. [ ] Fade out effect when removing post from list
+1. [ ] Fade out list when dismiss all
+1. [ ] Hide Sidebar on small screens, allow to slide to open
 
 ## Tools reference for this project
 
