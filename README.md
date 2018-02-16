@@ -39,7 +39,7 @@ Since Reddit API **IS NOT** well documented will use fields as described here.
 
 4) To start building components first will analize the application understand how many components we will have:
 
-![App Components](./docs/app_componets.png)
+![App Components](./docs/app_components.png?raw=true)
 
 The components that we will create are:
 
