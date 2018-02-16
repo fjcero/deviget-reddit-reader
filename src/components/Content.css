@@ -3,7 +3,8 @@
   overflow: auto;
   z-index: 1;
   background: white;
-  margin-left: 25%;
+  margin-left: 400px;
   width: auto;
   height: 100vh;
+  text-align: center;
 }

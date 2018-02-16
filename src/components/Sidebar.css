@@ -2,12 +2,16 @@ aside.sidebar {
   position: fixed;
   overflow: hidden;
   overflow-y: scroll;
-  width: 25%;
+  width: 400px;
   height: 100vh;
   background: black;
 }
 
 aside.sidebar h2 {
+  text-align: center;
+  font-size: 1.8rem;
   color: white;
-  font-size: 18px;
+  background: grey;
+  margin: 0;
+  padding: 10px;
 }
